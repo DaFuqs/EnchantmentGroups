@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "enchantment_groups",
+  "version": "$version",
+
+  "name": "Enchantment Groups",
+  "icon": "assets/enchantment_groups/icon.png",
+  "description": "Easy to set up Enchantment Exclusivity using Groups",
+  "license": "MIT",
+  "contact": {
+    "sources": "https://github.com/DaFuqs/EnchantmentGroups"
+  },
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "de.dafuqs.enchantmentgroups.EnchantmentGroups"
+    ]
+  },
+  "mixins": [
+    "enchantment_groups.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": ">=1.18.1",
+    "java": ">=17"
+  }
+}
