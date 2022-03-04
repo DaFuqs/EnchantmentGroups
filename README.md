@@ -26,7 +26,7 @@ All enchantments in that group are considered mutually exclusive to one another.
 Each group is identified by a name.
 This name serves no function in itself, but is there for modpack makers to give a descriptive name to make the 'why' understandable.
 
-**Note: Existing enchantment exclusivity, like defined in vanilla or by other mods are not modified, allowing vanilla and mods to do their thing.**
+**Note: Existing enchantment exclusivity, like defined in vanilla or by other mods is not modified, allowing vanilla and mods to do their thing. Don't ask for it.**
 
 ## Config Example
 If you were to define enchantment exclusivity like it exists in vanilla, it would look somewhat like this.
