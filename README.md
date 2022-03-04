@@ -32,6 +32,7 @@ This name serves no function in itself, but is there for modpack makers to give 
 If you were to define enchantment exclusivity like it exists in vanilla, it would look somewhat like this.
 - Protection enchantments cannot be combined
 - Melee enchantments cannot be combined
+- Fortune and Silk Touch are mutually exclusive
 - Bow cannot use both Infinity and Mending
 - Crossbow cannot use both Multishot and Piercing
 - Tridents can use Loyalty and Channeling combined, but both cannot be combined with Riptide
@@ -49,13 +50,13 @@ If you were to define enchantment exclusivity like it exists in vanilla, it woul
         "minecraft:smite",
         "minecraft:sharpness"
     ],
+    "mining": [
+        "minecraft:fortune",
+        "minecraft:silk_touch"
+    ],
     "bow": [
         "minecraft:infinity",
         "minecraft:mending"
-    ],
-    "crossbow": [
-        "minecraft:multishot",
-        "minecraft:piercing"
     ],
     "trident1": [
         "minecraft:loyalty",
@@ -64,6 +65,10 @@ If you were to define enchantment exclusivity like it exists in vanilla, it woul
     "trident2": [
         "minecraft:channeling",
         "minecraft:riptide"
+    ],
+    "crossbow": [
+        "minecraft:multishot",
+        "minecraft:piercing"
     ]
 }
 ```
