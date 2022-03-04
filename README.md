@@ -29,7 +29,7 @@ This name serves no function in itself, but is there for modpack makers to give 
 **Note: Existing enchantment exclusivity, like defined in vanilla or by other mods are not modified, allowing vanilla and mods to do their thing.**
 
 ## Config Example
-If you were to define vanilla enchantment exclusivity it would look somewhat like this.
+If you were to define enchantment exclusivity like it exists in vanilla, it would look somewhat like this.
 - Protection enchantments cannot be combined
 - Melee enchantments cannot be combined
 - Bow cannot use both Infinity and Mending
