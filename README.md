@@ -36,7 +36,6 @@ If you were to define vanilla enchantment exclusivity it would look somewhat lik
 - Crossbow cannot use both Multishot and Piercing
 - Tridents can use Loyalty and Channeling combined, but both cannot be combined with Riptide
 
-
 ```
 {
     "protection": [
