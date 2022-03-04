@@ -13,6 +13,11 @@ public class Config {
 
     public static final String DEFAULT_CONFIG = """
 {
+    /* This default config serves as an example on how to set up groups
+       Since these enchantments are mutually exclusive by default you will
+       not notice any changes when enchanting.
+       Create your own enchantment groups here and delete these defaults, if you wish
+    */
     "protection": [
         "minecraft:protection",
         "minecraft:blast_protection",
@@ -23,6 +28,12 @@ public class Config {
         "minecraft:bane_of_arthropods",
         "minecraft:smite",
         "minecraft:sharpness"
+    ],
+    "mining": [
+        "minecraft:fortune",
+        "minecraft:silk_touch",
+        "minecraft:unbreaking",
+        "minecraft:efficiency"
     ],
     "bow": [
         "minecraft:infinity",
@@ -40,9 +51,10 @@ public class Config {
         "minecraft:multishot",
         "minecraft:piercing"
     ]
-}""";
+}
+""";
 
-    private HashMap<Identifier, List<Identifier>> mutualExclusivities;
+    private final HashMap<Identifier, List<Identifier>> mutualExclusivities;
 
     public Config(HashMap<String, List<String>> input) {
         HashMap<Identifier, List<Identifier>> mutualExclusivities = new HashMap<>();
