@@ -1,4 +1,4 @@
-<img src="icon.png" align="right" width="180px"/>
+<img src="src/main/resources/assets/enchantment_groups/icon.png?raw=true" align="right" width="180px"/>
 
 # Enchantment Groups
 
