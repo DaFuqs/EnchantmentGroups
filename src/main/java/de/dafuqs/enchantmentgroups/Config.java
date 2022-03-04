@@ -31,9 +31,7 @@ public class Config {
     ],
     "mining": [
         "minecraft:fortune",
-        "minecraft:silk_touch",
-        "minecraft:unbreaking",
-        "minecraft:efficiency"
+        "minecraft:silk_touch"
     ],
     "bow": [
         "minecraft:infinity",
