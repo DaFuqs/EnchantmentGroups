@@ -14,9 +14,9 @@ public class Config {
     public static final String DEFAULT_CONFIG = """
 {
     /* This default config serves as an example on how to set up groups
-       Since these enchantments are mutually exclusive by default you will
-       not notice any changes when enchanting.
-       Create your own enchantment groups here and delete these defaults, if you wish
+       Since these enchantments are mutually exclusive by default already
+       you will probably not notice any changes when enchanting.
+       Create your own enchantment groups here or expand on these defaults, if you wish
     */
     "protection": [
         "minecraft:protection",

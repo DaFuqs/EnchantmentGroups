@@ -17,7 +17,7 @@ public class EnchantmentGroups implements ModInitializer {
 
     public static final String MODID = "enchantment_groups";
     private static final Logger LOGGER = LogManager.getLogger();
-    public static final String CONFIG_NAME = "EnchantmentGroups.json";
+    public static final String CONFIG_NAME = "EnchantmentGroups.json5";
     public static final Gson GSON = new Gson();
 
     public static Config config;
@@ -36,7 +36,7 @@ public class EnchantmentGroups implements ModInitializer {
         try {
             File file = FabricLoader.getInstance().getConfigDir().resolve(CONFIG_NAME).toFile();
             if (!file.exists()) {
-                EnchantmentGroups.log(Level.WARN, "'EnchantmentGroups.json' config file not found! Creating default config.");
+                EnchantmentGroups.log(Level.WARN, "'EnchantmentGroups.json5' config file not found! Creating default config.");
                 file.createNewFile();
                 FileOutputStream out = new FileOutputStream(file, false);
                 out.write(Config.DEFAULT_CONFIG.getBytes());
@@ -51,10 +51,10 @@ public class EnchantmentGroups implements ModInitializer {
 
                 EnchantmentGroups.log(Level.INFO, "Init complete");
             } catch (Exception e) {
-                log(Level.ERROR, "Error reading config file 'EnchantmentGroups.json': " + e.getMessage());
+                log(Level.ERROR, "Error reading config file 'EnchantmentGroups.json5': " + e.getMessage());
             }
         } catch (IOException e) {
-            log(Level.ERROR, "Error loading config file 'EnchantmentGroups.json': " + e.getMessage());
+            log(Level.ERROR, "Error loading config file 'EnchantmentGroups.json5': " + e.getMessage());
         }
     }
 
