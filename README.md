@@ -15,8 +15,8 @@ That brings up a list of issues:
 - Players end up with equipment that have so many enchantments, that they are pretty much omnipotent beings
 
 ## Enchantment Groups Solution
-Enchantment Groups tries to resolve that problem seamlessly and vanilla-like. Using Enchantment Groups:
-- Players never have to resolve enchantment conflicts at all. No commands, no additional items, no screen cluttering tooltips
+Enchantment Groups tries to resolve that problem immersively and vanilla-like. Using Enchantment Groups:
+- Players never have to resolve enchantment conflicts manually. No commands, no additional items, no screen cluttering tooltips
 - Easy to set up and maintain for modpack makers
 
 # Config
