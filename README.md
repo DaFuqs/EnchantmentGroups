@@ -12,7 +12,7 @@ While mods declare Enchantments mutually exclusivity between their own Enchantme
 
 That brings up a list of issues:
 - Players do not have to make meaningful choices. There is no need to specialize, like in vanilla
-- Players end up with equipment that have so many enchantments, that they are pretty much omnipotent beings
+- Players end up with equipment with so many enchantments, that they pretty much get omnipotent beings
 
 ## Enchantment Groups Solution
 Enchantment Groups tries to resolve that problem immersively and vanilla-like. Using Enchantment Groups:
