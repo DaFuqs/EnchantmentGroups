@@ -18,6 +18,7 @@ That brings up a list of issues:
 Enchantment Groups tries to resolve that problem immersively and vanilla-like. Using Enchantment Groups:
 - Players never have to resolve enchantment conflicts manually. No commands, no additional items, no screen cluttering tooltips
 - Easy to set up and maintain for modpack makers
+- No special integration with other mods that provide new enchantments or enchantment methods needed, as long as they don't do something weird (like not calling super() methods)
 
 # Config
 The config format is as easy as can be. Via json, you are able to create groups of enchantments.
