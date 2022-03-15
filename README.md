@@ -12,12 +12,13 @@ While mods declare Enchantments mutually exclusivity between their own Enchantme
 
 That brings up a list of issues:
 - Players do not have to make meaningful choices. There is no need to specialize, like in vanilla
-- Players end up with equipment that have so many enchantments, that they are pretty much omnipotent beings
+- Players end up with equipment with so many enchantments, that they pretty much get omnipotent beings
 
 ## Enchantment Groups Solution
 Enchantment Groups tries to resolve that problem immersively and vanilla-like. Using Enchantment Groups:
 - Players never have to resolve enchantment conflicts manually. No commands, no additional items, no screen cluttering tooltips
 - Easy to set up and maintain for modpack makers
+- No special integration with other mods that provide new enchantments or enchantment methods needed, as long as they don't do something weird (like not calling super() methods)
 
 # Config
 The config format is as easy as can be. Via json, you are able to create groups of enchantments.
