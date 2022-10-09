@@ -7,7 +7,6 @@ import me.wawwior.config.io.impl.FileInfo;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.apache.logging.log4j.Level;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,7 +15,7 @@ import java.util.List;
 public class Config extends Configurable<Config.EnchantmentConfig, FileInfo> {
 
     public static class EnchantmentConfig implements IConfig {
-        HashMap<Identifier, List<Identifier>> exclusivityGroups = new HashMap<>();
+        HashMap<String, List<Identifier>> exclusivityGroups = new HashMap<>();
         List<Identifier> treasures = new ArrayList<>();
 
     }
