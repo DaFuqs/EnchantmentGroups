@@ -15,7 +15,7 @@ import java.util.List;
 public class Config extends Configurable<Config.EnchantmentConfig, FileInfo> {
 
     public static class EnchantmentConfig implements IConfig {
-        HashMap<String, List<Identifier>> exclusivityGroups = new HashMap<>();
+        HashMap<String, List<Identifier>> groups = new HashMap<>();
         List<Identifier> treasures = new ArrayList<>();
 
     }
@@ -27,7 +27,7 @@ public class Config extends Configurable<Config.EnchantmentConfig, FileInfo> {
     }
 
     public void transform() {
-        config.exclusivityGroups.values().forEach(s -> s.forEach(i -> {
+        config.groups.values().forEach(s -> s.forEach(i -> {
             if(Registry.ENCHANTMENT.containsId(i)) {
                 exclusivityGroups.put(i, s);
             }
