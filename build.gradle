@@ -14,12 +14,18 @@ version = "${project.mod_version}+${project.minecraft_version}"
 
 repositories {
 
+	maven {
+		name = "Wawwior"
+		url = "https://repo.wawwior.me/repository/maven-public/"
+	}
+
 }
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "me.wawwior:config:1.3.7"
 }
 
 processResources {

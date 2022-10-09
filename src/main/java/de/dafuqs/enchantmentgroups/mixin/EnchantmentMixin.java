@@ -21,4 +21,14 @@ public class EnchantmentMixin {
         }
     }
 
+    @Inject(method = "isTreasure()Z", at = @At("RETURN"), cancellable = true)
+    public final void enchantmentGroups$applyTreasure(CallbackInfoReturnable<Boolean> cir) {
+        if(!cir.getReturnValue() && EnchantmentGroups.config != null) {
+            Enchantment thisEnchantment = (Enchantment) (Object) this;
+            if(EnchantmentGroups.config.isTreasure(thisEnchantment)) {
+                cir.setReturnValue(true);
+            }
+        }
+    }
+
 }
