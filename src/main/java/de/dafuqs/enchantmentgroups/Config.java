@@ -23,7 +23,7 @@ public class Config extends Configurable<Config.EnchantmentConfig, FileInfo> {
     HashMap<Identifier, List<Identifier>> exclusivityGroups = new HashMap<>();
 
     public Config(ConfigProvider<FileInfo> provider) {
-        super(EnchantmentConfig.class, FileInfo.of("", EnchantmentGroups.CONFIG_NAME), provider);
+        super(EnchantmentConfig.class, FileInfo.of("", EnchantmentGroups.MOD_ID), provider);
     }
 
     public void transform() {
