@@ -1,8 +1,8 @@
 package de.dafuqs.enchantmentgroups;
 
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.Level;
 
 import java.util.ArrayList;
@@ -87,10 +87,10 @@ public class Config {
     public boolean canCombine(Enchantment enchantment1, Enchantment enchantment2) {
         // we only have to check for a single enchantment here
         // since both exclusivity lists would return either true or false everytime
-        Identifier id1 = Registry.ENCHANTMENT.getId(enchantment1);
+        Identifier id1 = Registries.ENCHANTMENT.getId(enchantment1);
         if(mutualExclusivities.containsKey(id1)) {
             List<Identifier> id1Exclusivities = mutualExclusivities.get(id1);
-            Identifier id2 = Registry.ENCHANTMENT.getId(enchantment2);
+            Identifier id2 = Registries.ENCHANTMENT.getId(enchantment2);
             return !id1Exclusivities.contains(id2);
         }
         return true;
