@@ -11,12 +11,52 @@ import net.minecraft.util.registry.Registry;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Config extends Configurable<Config.EnchantmentConfig, FileInfo> {
 
     public static class EnchantmentConfig implements IConfig {
-        HashMap<String, List<Identifier>> groups = new HashMap<>();
-        List<Identifier> treasures = new ArrayList<>();
+        Map<String, List<Identifier>> groups = new HashMap<>(Map.of(
+                "protection", List.of(
+                        new Identifier("minecraft", "protection"),
+                        new Identifier("minecraft", "blast_protection"),
+                        new Identifier("minecraft", "fire_protection"),
+                        new Identifier("minecraft", "projectile_protection")
+                ),
+                "melee_damage", List.of(
+                        new Identifier("minecraft", "bane_of_arthropods"),
+                        new Identifier("minecraft", "smite"),
+                        new Identifier("minecraft", "sharpness")
+                ),
+                "mining", List.of(
+                        new Identifier("minecraft", "fortune"),
+                        new Identifier("minecraft", "silk_touch")
+                ),
+                "bow", List.of(
+                        new Identifier("minecraft", "mending"),
+                        new Identifier("minecraft", "infinity")
+                ),
+                "trident1", List.of(
+                        new Identifier("minecraft", "loyalty"),
+                        new Identifier("minecraft", "riptide")
+                ),
+                "trident2", List.of(
+                        new Identifier("minecraft", "channeling"),
+                        new Identifier("minecraft", "riptide")
+                ),
+                "crossbow", List.of(
+                        new Identifier("minecraft", "multishot"),
+                        new Identifier("minecraft", "piercing")
+                )
+        ));
+        List<Identifier> treasures = new ArrayList<>(List.of(
+                new Identifier("minecraft", "frost_walker"),
+                new Identifier("minecraft", "mending"),
+                new Identifier("minecraft", "soul_speed"),
+                new Identifier("minecraft", "swift_sneak"),
+                new Identifier("minecraft", "binding_curse"),
+                new Identifier("minecraft", "vanishing_curse")
+        ));
 
     }
 

@@ -5,14 +5,10 @@ import me.wawwior.config.io.impl.FileInfo;
 import me.wawwior.config.io.impl.JsonFileAdapter;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class EnchantmentGroups implements ModInitializer {
 
     public static final String MOD_ID = "enchantment_groups";
-
-    public static final Logger LOGGER = LoggerFactory.getLogger("EnchantmentGroups");
 
     private static final ConfigProvider<FileInfo> provider = new ConfigProvider<>(
             new JsonFileAdapter("config")
@@ -27,6 +23,7 @@ public class EnchantmentGroups implements ModInitializer {
     public void onInitialize() {
         config.load();
         config.transform();
+        Runtime.getRuntime().addShutdownHook(new Thread(config::save));
     }
 
 }
