@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.12+'
+	id 'fabric-loom' version '1.0-SNAPSHOT'
 	id 'maven-publish'
 	id 'com.github.johnrengelman.shadow' version '7.0.0'
 }
@@ -14,7 +14,6 @@ if(rootProject.file('private.gradle').exists()) { //Publishing details
 version = "${project.mod_version}+${project.minecraft_version}"
 
 repositories {
-
 	maven {
 		name = "Wawwior"
 		url = "https://repo.wawwior.me/repository/maven-public/"
