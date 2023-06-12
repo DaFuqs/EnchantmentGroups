@@ -10,9 +10,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Enchantment.class)
 public class EnchantmentMixin {
 
-    @Inject(method = "canAccept(Lnet/minecraft/enchantment/Enchantment;)Z", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "canAccept(Lnet/minecraft/enchantment/Enchantment;)Z", at = @At("HEAD"), cancellable = true)
     public final void enchantmentGroups$applyEnchantmentGroups(Enchantment other, CallbackInfoReturnable<Boolean> cir) {
-        if(cir.getReturnValue() && EnchantmentGroups.config != null) {
+        if(EnchantmentGroups.config != null) {
             Enchantment thisEnchantment = (Enchantment) (Object) this;
             boolean canCombine = EnchantmentGroups.config.canCombine(thisEnchantment, other);
             if(!canCombine) {
@@ -21,9 +21,9 @@ public class EnchantmentMixin {
         }
     }
 
-    @Inject(method = "isTreasure()Z", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "isTreasure()Z", at = @At("HEAD"), cancellable = true)
     public final void enchantmentGroups$applyTreasure(CallbackInfoReturnable<Boolean> cir) {
-        if(!cir.getReturnValue() && EnchantmentGroups.config != null) {
+        if(EnchantmentGroups.config != null) {
             Enchantment thisEnchantment = (Enchantment) (Object) this;
             if(EnchantmentGroups.config.isTreasure(thisEnchantment)) {
                 cir.setReturnValue(true);
