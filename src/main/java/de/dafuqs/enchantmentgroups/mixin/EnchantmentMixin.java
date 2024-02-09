@@ -13,13 +13,10 @@ public class EnchantmentMixin {
 
     @Inject(method = "canAccept(Lnet/minecraft/enchantment/Enchantment;)Z", at = @At("RETURN"), cancellable = true)
     public final void enchantmentGroups$applyEnchantmentGroups(Enchantment other, CallbackInfoReturnable<Boolean> cir) {
-        EnchantmentGroups.log(Level.INFO, "mixin called");
         if(cir.getReturnValue() && EnchantmentGroups.config != null) {
-            EnchantmentGroups.log(Level.INFO, "mixin in if");
             Enchantment thisEnchantment = (Enchantment) (Object) this;
             boolean canCombine = EnchantmentGroups.config.canCombine(thisEnchantment, other);
             if(!canCombine) {
-                EnchantmentGroups.log(Level.INFO, "config: not combinable");
                 cir.setReturnValue(false);
             }
         }
